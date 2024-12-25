@@ -1,11 +1,12 @@
-*{
+
+* {
     margin: 0;
-    padding: 0px;
+    padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-.hero{
+.hero {
     background: linear-gradient(45deg, #0096c7, #90e0ef);
     width: 100vw;
     height: 100vh;
@@ -14,23 +15,25 @@
     justify-content: center;
     flex-direction: column;
     color: #caf0f8;
+    padding: 20px;
+    text-align: center; 
 }
 
-.hero h1{
+.hero h1 {
     font-size: 2.8rem;
     font-weight: 700;
     color: aliceblue;
     margin-top: -4rem;
     margin-bottom: 3.5rem;
-    /* color: #caf0f8; */
 }
 
-.hero h1 span{
+.hero h1 span {
     color: #033546;
 }
 
-textarea{
-    width: 30rem;
+textarea {
+    width: 100%; 
+    max-width: 30rem; 
     height: 250px;
     background: #90e0ef;
     color: #127475;
@@ -44,21 +47,23 @@ textarea{
     margin-bottom: 30px;
 }
 
-textarea::placeholder{
+textarea::placeholder {
     font-size: 1.1rem;
     color: rgb(128, 161, 192);
 }
 
-.row{
-    width: 30rem;
+.row {
+    width: 100%;
+    max-width: 30rem;
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-button{
+button {
     background-color: #03058e;
-    color:white;
+    color: white;
     font-size: 1rem;
     padding: 10px 30px;
     border-radius: 35px;
@@ -67,13 +72,12 @@ button{
     cursor: pointer;
 }
 
-select{
+select {
     flex: 1;
     color: #127475;
     background: #90e0ef;
     height: 50px;
-    padding: 0px,20px;
-    /* margin-left: 10px;  */
+    padding: 0px 20px;
     outline: 0;
     border: 0;
     border-radius: 35px;
@@ -81,7 +85,37 @@ select{
     background-image: url(arrow.svg);
     background-repeat: no-repeat;
     background-size: 15px;
-    background-position-x: calc(100% - 15px) ;
+    background-position-x: calc(100% - 15px);
     background-position-y: 13px;
-    
+}
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; 
+        margin-top: -2rem;
+        margin-bottom: 2rem;
+    }
+
+    textarea {
+        height: 200px; 
+    }
+
+    button {
+        padding: 10px 20px; 
+    }
+
+    select {
+        height: 45px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .row {
+        gap: 10px; 
+    }
 }
